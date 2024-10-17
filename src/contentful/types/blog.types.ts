@@ -31,3 +31,13 @@ export interface TypeCultureCompanyFields {
 
 export type TypeCultureCompanySkeleton = EntrySkeletonType<TypeCultureCompanyFields, "cultureCompany">;
 export type TypeCultureCompany<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeCultureCompanySkeleton, Modifiers, Locales>;
+
+
+export interface TypeHomeFields {
+    title?: EntryFieldTypes.Symbol;
+    slug?: EntryFieldTypes.Symbol;
+    body?: EntryFieldTypes.RichText;
+}
+
+export type TypeHomeSkeleton = EntrySkeletonType<TypeHomeFields, "home">;
+export type TypeHome<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<TypeHomeSkeleton, Modifiers, Locales>;

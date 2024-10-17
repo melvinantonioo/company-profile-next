@@ -1,32 +1,58 @@
+import ContentfulClient from '@/contentful/contentfulClient';
+import { TypeHomeSkeleton } from '@/contentful/types/blog.types';
 import Link from 'next/link'
 import React from 'react'
+import RichText from './richText';
 
-export default function HeroSection() {
+const getHome = async () => {
+    try {
+        const data = await ContentfulClient.getEntries<TypeHomeSkeleton>({
+            content_type: "home"
+            //content type based conten
+        })
+
+        return data.items;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export default async function HeroSection() {
+    const home = await getHome();
     return (
-        <section
-            className='relative h-screen bg-cover bg-center flex items-center justify-center shadow-lg'
-            style={{ backgroundImage: "url('/building.jpg')" }}
-        >
+        <div>
+            {home &&
+                home?.map((home, idx) => (
+                    <section
+                        key={idx}
+                        className='relative h-screen bg-cover bg-center flex items-center justify-center shadow-lg'
+                        style={{ backgroundImage: "url('/building.jpg')" }}
+                    >
 
-            {/* overlay, untuk tutupin background agar lebih soft */}
+                        {/* overlay, untuk tutupin background agar lebih soft */}
 
-            <div className='absolute inset-0 bg-black bg-opacity-60'></div>
+                        <div className='absolute inset-0 bg-black bg-opacity-60'></div>
 
-            {/* content */}
-            <div className='relative z-10 text-center text-white px-4'>
+                        {/* content */}
+                        <div className='relative z-10 text-center text-white px-4'>
 
-                <h1 className='text-5xl font-bold mb-4'>Welcome To Antonio Agency</h1>
+                            <h1 className='text-5xl font-bold mb-4'>{home.fields.title}</h1>
+                            <div className='text-xl mb-6 max-w-lg mx-auto'>
+                                <RichText
+                                    document={home.fields.body} />
+                            </div>
 
-                <p className='text-xl mb-6 max-w-lg mx-auto'> We provide exceptional digital marketing services to boost your brand to new heights. Join us today and grow your business like never before.</p>
+                            <Link
+                                href='/about-us'
+                                className='inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded'>
+                                Get Started
+                            </Link>
 
-                <Link
-                    href='/about-us'
-                    className='inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded'>
-                    Get Started
-                </Link>
+                        </div>
 
-            </div>
-
-        </section>
+                    </section>
+                ))
+            }
+        </div>
     )
 }
