@@ -1,9 +1,0 @@
-{/* History Company Section */ }
-<section className="max-w-7xl mx-auto mb-16">
-    <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold">Our Company History</h2>
-        <p className="text-lg mt-4 max-w-2xl mx-auto">
-            Our company was founded with the goal of delivering exceptional products and services to meet the evolving needs of our clients. Over the years, we have grown and adapted, staying true to our mission while continuously innovating.
-        </p>
-    </div>
-</section>

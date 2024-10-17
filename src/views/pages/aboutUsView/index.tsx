@@ -2,7 +2,7 @@ import CultureCompany from '@/views/components/cultureCompany'
 import Footer from '@/views/components/footer'
 import HistoryCompany from '@/views/components/historyCompany'
 import TeamCards from '@/views/components/teamCards'
-import Image from 'next/image'
+
 
 // import React from 'react'
 

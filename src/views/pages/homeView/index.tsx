@@ -1,5 +1,5 @@
 import Footer from '@/views/components/footer'
-import Header from '@/views/components/header'
+
 import HeroSection from '@/views/components/heroSection'
 import Overview from '@/views/components/overview'
 import Services from '@/views/components/services'
