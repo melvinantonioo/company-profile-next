@@ -6,13 +6,4 @@
             Our company was founded with the goal of delivering exceptional products and services to meet the evolving needs of our clients. Over the years, we have grown and adapted, staying true to our mission while continuously innovating.
         </p>
     </div>
-    <div className="flex justify-center">
-        <Image
-            src="/Teams.jpg"
-            alt="Company History"
-            className="w-full max-w-4xl rounded-md shadow-lg"
-            width={90}
-            height={50}
-        />
-    </div>
 </section>
