@@ -3,12 +3,12 @@ import { TypeHomeSkeleton } from '@/contentful/types/blog.types';
 import Link from 'next/link'
 import React from 'react'
 import RichText from './richText';
+import Image from 'next/image'; // Import next/image
 
 const getHome = async () => {
     try {
         const data = await ContentfulClient.getEntries<TypeHomeSkeleton>({
             content_type: "home"
-            //content type based conten
         })
 
         return data.items;
@@ -25,12 +25,22 @@ export default async function HeroSection() {
                 home?.map((home, idx) => (
                     <section
                         key={idx}
-                        className='relative h-screen bg-cover bg-center flex items-center justify-center shadow-lg'
-                        style={{ backgroundImage: "url('/building.jpg')" }}
+                        className='relative h-screen flex items-center justify-center shadow-lg'
                     >
 
-                        {/* overlay, untuk tutupin background agar lebih soft */}
+                        {/* optimized background image using next/image */}
+                        <div className='absolute inset-0 z-0'>
+                            <Image
+                                src='/building.webp' // Path ke gambar
+                                alt='Building'
+                                layout='fill' // Mengisi seluruh area
+                                objectFit='cover' // Agar gambar tetap sesuai dengan layout yang ada
+                                priority // Mengoptimalkan LCP dengan memprioritaskan loading
+                                quality={80} // Mengontrol kualitas gambar agar lebih cepat
+                            />
+                        </div>
 
+                        {/* overlay, untuk menutupi background agar lebih soft */}
                         <div className='absolute inset-0 bg-black bg-opacity-60'></div>
 
                         {/* content */}
@@ -38,8 +48,7 @@ export default async function HeroSection() {
 
                             <h1 className='text-5xl font-bold mb-4'>{home.fields.title}</h1>
                             <div className='text-xl mb-6 max-w-lg mx-auto'>
-                                <RichText
-                                    document={home.fields.body} />
+                                <RichText document={home.fields.body} />
                             </div>
 
                             <Link
