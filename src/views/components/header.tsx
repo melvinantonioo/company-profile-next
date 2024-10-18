@@ -30,7 +30,7 @@ export default function Header() {
                 </nav>
 
                 {/* Contact us Button */}
-                <Link href="/#footer"
+                <Link href="/"
                     className='hidden md:inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded'
                 >
                     Contact Us
@@ -62,9 +62,8 @@ export default function Header() {
                         <Link href="/product" className="block py-2 hover:text-green-500">Product & Services</Link>
                         <Link href="/about-us" className="block py-2 hover:text-green-500">About-Us</Link>
                         <Link href="/teams" className="block py-2 hover:text-green-500">Teams</Link>
-                        <Link href="/faqs" className="block py-2 hover:text-green-500">FAQs</Link>
                         <Link
-                            href="/contact"
+                            href="/"
                             className="block mt-4 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded text-center"
                         >
                             Contact Us
