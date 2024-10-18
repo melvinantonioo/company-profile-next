@@ -31,12 +31,12 @@ export default async function HeroSection() {
                         {/* optimized background image using next/image */}
                         <div className='absolute inset-0 z-0'>
                             <Image
-                                src='/building.webp' // Path ke gambar
+                                src='/building.webp' 
                                 alt='Building'
-                                layout='fill' // Mengisi seluruh area
-                                objectFit='cover' // Agar gambar tetap sesuai dengan layout yang ada
-                                priority // Mengoptimalkan LCP dengan memprioritaskan loading
-                                quality={80} // Mengontrol kualitas gambar agar lebih cepat
+                                layout='fill'
+                                objectFit='cover'
+                                priority
+                                quality={80} 
                             />
                         </div>
 

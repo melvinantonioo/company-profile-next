@@ -21,6 +21,21 @@ export default function TeamsView() {
                     position="Lead Designer"
                     imgSrc="https://randomuser.me/api/portraits/women/45.jpg"
                 />
+                <TeamCards
+                    name="Kenny Gray"
+                    position="Back-end Engineer"
+                    imgSrc="https://randomuser.me/api/portraits/men/37.jpg"
+                />
+                <TeamCards
+                    name="Bruce Miller"
+                    position="Front-end Engineer"
+                    imgSrc="https://randomuser.me/api/portraits/men/38.jpg"
+                />
+                <TeamCards
+                    name="Grace"
+                    position="UI/UX Designer"
+                    imgSrc="https://randomuser.me/api/portraits/women/46.jpg"
+                />
             </div>
             <Footer />
         </div>

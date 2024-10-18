@@ -38,8 +38,8 @@ export default async function CultureCompany() {
                                 src={`https:${(culture.fields.image as IAsset).fields.file.url}`}
                                 alt="Company Culture"
                                 className="w-full max-w-4xl rounded-md shadow-lg"
-                                width={1500}  // Lebih kecil tapi masih menjaga kualitas baik
-                                height={1000} // Sesuaikan agar proporsional
+                                width={1500}  
+                                height={1000} 
                                 layout="responsive"
                                 
                             />

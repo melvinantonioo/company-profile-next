@@ -29,7 +29,7 @@ export default function Header() {
 
                 </nav>
 
-                {/* Contact us Button */}
+                { }
                 <Link href="/"
                     className='hidden md:inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded'
                 >

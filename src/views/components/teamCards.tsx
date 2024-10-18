@@ -25,10 +25,10 @@ export default function TeamCards({ name, position, imgSrc }: {
                     src={imgSrc}
                     alt={name}
                     className="w-30 h-30 object-cover mb-4 ring ring-inset ring-gray-600 py-6 px-6 rounded-full items-center"
-                    width={200}   // Tingkatkan nilai width dan height untuk resolusi gambar yang lebih tinggi
+                    width={200}  
                     height={200}
-                    quality={100} // 100 adalah kualitas maksimal
-                    priority={true}  // Opsional: untuk memprioritaskan loading gambar penting
+                    quality={100} 
+                    priority={true}  
                 />
                 <h3 className="text-xl font-bold text-gray-200">{name}</h3>
                 <p className="text-sm text-gray-400">{position}</p>
