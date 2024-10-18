@@ -47,7 +47,7 @@ export default async function HeroSection() {
                         <div className='relative z-10 text-center text-white px-4'>
 
                             <h1 className='text-5xl font-bold mb-4'>{home.fields.title}</h1>
-                            <div className='text-xl mb-6 max-w-lg mx-auto'>
+                            <div className='text-xl mb-6 max-w-lg mx-auto text-gray-400'>
                                 <RichText document={home.fields.body} />
                             </div>
 

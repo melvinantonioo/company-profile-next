@@ -39,8 +39,9 @@ export default async function HistoryCompany() {
                                 src={`https:${(content.fields.image as IAsset).fields.file.url}`}
                                 alt="Company History"
                                 className="w-full max-w-4xl rounded-md shadow-lg"
-                                width={90}
-                                height={50}
+                                width={1500}  // Lebih kecil tapi masih menjaga kualitas baik
+                                height={1000} // Sesuaikan agar proporsional
+                                layout="responsive"
                             />
                         </div>
                     </section>

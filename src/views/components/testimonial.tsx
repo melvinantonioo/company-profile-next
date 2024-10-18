@@ -58,7 +58,7 @@ export default function Testimonial() {
                             </div>
 
                             {/* Name and Title */}
-                            <h3 className="text-xl font-semibold text-gray-700">
+                            <h3 className="text-xl font-semibold text-gray-200">
                                 {testimonial.name}
                             </h3>
                             <p className="text-gray-500 mb-2">

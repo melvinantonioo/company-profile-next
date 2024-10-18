@@ -9,7 +9,7 @@ export default function TeamsView() {
                 <TeamCards
                     name="John Brook"
                     position="CEO"
-                    imgSrc="https://randomuser.me/api/portraits/men/32.jpg"
+                    imgSrc="https://randomuser.me/api/portraits/men/36.jpg"
                 />
                 <TeamCards
                     name="Joey Smith"
